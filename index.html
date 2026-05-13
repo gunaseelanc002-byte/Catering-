@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Angalamman Catering | Authentic South Indian Catering – Erode, Tamil Nadu</title>
+<meta name="description" content="Authentic South Indian catering for weddings, events & functions across Erode, Tirupur, Coimbatore, Salem, Dharmapuri and Namakkal. Call +91 9361168723">
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0001A;
+    --dark-red: #8B0012;
+    --gold: #D4A017;
+    --light-gold: #F5C842;
+    --cream: #FFF8F0;
+    --dark: #1A0A00;
+    --text: #3D1A00;
+    --white: #FFFFFF;
+    --shadow: 0 8px 40px rgba(192,0,26,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(26,10,0,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--red), var(--gold));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-family: 'Yeseva One', serif;
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .logo-text span {
+    color: var(--gold);
+    font-size: 0.75rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .nav-call {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(192,0,26,0.4);
+  }
+
+  .nav-call:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192,0,26,0.5);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px; height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1A0A00 0%, #3D0010 50%, #1A0A00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5% 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(192,0,26,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(212,160,23,0.2) 0%, transparent 60%);
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--gold) 0px,
+      var(--gold) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(212,160,23,0.15);
+    border: 1px solid rgba(212,160,23,0.4);
+    color: var(--gold);
+    padding: 6px 20px;
+    border-radius: 25px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    animation: fadeInDown 0.8s ease forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Yeseva One', serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 15px;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease 0.3s both;
+  }
+
+  .hero-tamil {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 35px;
+    animation: fadeInUp 0.8s ease 0.4s both;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.5s both;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 25px rgba(192,0,26,0.5);
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(192,0,26,0.6);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-3px);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.6s both;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Yeseva One', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* SECTIONS */
+  section { padding: 80px 5%; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: rgba(192,0,26,0.1);
+    color: var(--red);
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    border: 1px solid rgba(192,0,26,0.2);
+  }
+
+  .section-title {
+    font-family: 'Yeseva One', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+
+  .section-title span { color: var(--red); }
+
+  .section-line {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+
+  /* ABOUT */
+  .about { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-card-main {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    border-radius: 20px;
+    padding: 50px 40px;
+    color: white;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .about-card-main .big-icon { font-size: 5rem; margin-bottom: 20px; }
+
+  .about-card-main h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .about-card-main p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+
+  .about-badge {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    background: var(--gold);
+    color: var(--dark);
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(212,160,23,0.4);
+  }
+
+  .about-badge strong {
+    display: block;
+    font-size: 1.8rem;
+    font-family: 'Yeseva One', serif;
+  }
+
+  .about-badge span { font-size: 0.75rem; font-weight: 600; }
+
+  .about-content h2 {
+    font-family: 'Yeseva One', serif;
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .about-content h2 span { color: var(--red); }
+
+  .about-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cream);
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+    border-left: 3px solid var(--red);
+  }
+
+  /* MENU */
+  .menu { background: var(--cream); }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .menu-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(192,0,26,0.12);
+  }
+
+  .menu-card-header {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .menu-card:nth-child(1) .menu-card-header { background: linear-gradient(135deg, #FF6B35, #E8432A); }
+  .menu-card:nth-child(2) .menu-card-header { background: linear-gradient(135deg, var(--red), var(--dark-red)); }
+  .menu-card:nth-child(3) .menu-card-header { background: linear-gradient(135deg, #2C1654, #4A1E8A); }
+
+  .menu-time-icon { font-size: 3rem; margin-bottom: 10px; display: block; }
+
+  .menu-card-header h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  .menu-card-header p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.82rem;
+  }
+
+  .menu-items {
+    padding: 25px 30px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .menu-item:last-child { border-bottom: none; }
+
+  .menu-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .menu-card:nth-child(1) .menu-dot { background: #FF6B35; }
+  .menu-card:nth-child(2) .menu-dot { background: var(--red); }
+  .menu-card:nth-child(3) .menu-dot { background: #4A1E8A; }
+
+  /* SERVICES */
+  .services { background: var(--white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    border-color: var(--red);
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(192,0,26,0.1);
+  }
+
+  .service-emoji { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+  .service-card h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .service-list {
+    list-style: none;
+    text-align: left;
+  }
+
+  .service-list li {
+    font-size: 0.82rem;
+    color: #777;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .service-list li::before {
+    content: '✓';
+    color: var(--red);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  /* BRANCHES */
+  .branches {
+    background: linear-gradient(135deg, #1A0A00, #3D0010);
+    color: white;
+  }
+
+  .branches .section-tag {
+    background: rgba(212,160,23,0.15);
+    color: var(--gold);
+    border-color: rgba(212,160,23,0.3);
+  }
+
+  .branches .section-title { color: white; }
+  .branches .section-title span { color: var(--gold); }
+
+  .branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .branch-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .branch-card:hover {
+    background: rgba(212,160,23,0.1);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+  }
+
+  .branch-card.main-branch {
+    border-color: var(--gold);
+    background: rgba(212,160,23,0.1);
+  }
+
+  .branch-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+
+  .branch-card h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .branch-card p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .main-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+
+  /* CONTACT */
+  .contact { background: var(--cream); }
+
+  .contact-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+  }
+
+  .contact-info h3 span { color: var(--red); }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 18px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .contact-item-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item-text h4 {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .contact-item-text p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .contact-item-text a {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .contact-cta {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    border-radius: 20px;
+    padding: 40px 35px;
+    color: white;
+    text-align: center;
+  }
+
+  .contact-cta h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .contact-cta p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+
+  .cta-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    color: var(--red);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .cta-phone:hover { transform: scale(1.03); }
+
+  .cta-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 13px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .cta-whatsapp:hover { background: #1ebe5d; transform: scale(1.03); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.7);
+    padding: 40px 5% 25px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 20px 0;
+  }
+
+  .footer-bottom {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px; right: 25px;
+    z-index: 999;
+    background: #25D366;
+    color: white;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 25px rgba(37,211,102,0.5);
+    text-decoration: none;
+    transition: all 0.3s;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    animation: none;
+  }
+
+  .call-float {
+    position: fixed;
+    bottom: 95px; right: 25px;
+    z-index: 999;
+    background: var(--red);
+    color: white;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 6px 25px rgba(192,0,26,0.4);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .call-float:hover { transform: scale(1.1); }
+
+  .instagram-float {
+    position: fixed;
+    bottom: 158px; right: 25px;
+    z-index: 999;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 6px 25px rgba(220,39,67,0.5);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .instagram-float:hover { transform: scale(1.1); }
+
+  /* EXPERIENCE BANNER */
+  .experience-banner {
+    background: linear-gradient(135deg, #1A0A00, #3D0010);
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .exp-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+  }
+
+  .exp-item { text-align: center; }
+
+  .exp-num {
+    font-family: 'Yeseva One', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .exp-label {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .exp-divider {
+    width: 2px; height: 60px;
+    background: rgba(212,160,23,0.3);
+  }
+
+  .tamilnadu-para {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,160,23,0.25);
+    border-radius: 16px;
+    padding: 30px 35px;
+    text-align: center;
+  }
+
+  .tamilnadu-para h3 {
+    font-family: 'Yeseva One', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .tamilnadu-para p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .tamilnadu-para p span { color: var(--gold); font-weight: 600; }
+
+  /* ANIMATIONS */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 25px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 6px 35px rgba(37,211,102,0.8); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; left: 0; right: 0;
+      background: rgba(26,10,0,0.98);
+      padding: 20px 5%;
+      gap: 15px;
+    }
+    .hamburger { display: flex; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-badge { position: static; margin-top: 15px; display: inline-block; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .about-features { grid-template-columns: 1fr; }
+    .hero-stats { gap: 25px; }
+    nav { padding: 0 4%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="logo">
+    <div class="logo-icon">🍛</div>
+    <div class="logo-text">
+      Sri Angalamman
+      <span>Catering Services</span>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#branches">Branches</a></li>
+    <li><a href="#contact" class="nav-call">📞 Call Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ Authentic South Indian Catering</div>
+    <h1>Sri <span>Angalamman</span><br>Catering</h1>
+    <p class="hero-subtitle">Serving Authentic Flavours for Every Occasion Across Tamil Nadu</p>
+    <p class="hero-tamil">சுவையான உணவு, சிறந்த சேவை</p>
+    <div class="hero-btns">
+      <a href="tel:+919361168723" class="btn-primary">📞 Call to Book</a>
+      <a href="#menu" class="btn-secondary">View Our Menu</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">6+</span>
+        <span class="stat-label">Cities Served</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Events Done</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Fresh Food</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-card-main">
+        <div class="big-icon">🍽️</div>
+        <h3>Traditional Taste,<br>Modern Service</h3>
+        <p>We bring the authentic flavours of Tamil Nadu to every event — cooked fresh with love and served with care.</p>
+      </div>
+      <div class="about-badge">
+        <strong>⭐ 4.9</strong>
+        <span>Customer Rating</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-tag">About Us</div>
+      <h2>Authentic South Indian<br><span>Catering Since Years</span></h2>
+      <p>Sri Angalamman Catering is a trusted name in Tamil Nadu for delivering authentic South Indian food for all types of functions. Based in Erode, we proudly serve across Tirupur, Coimbatore, Salem, Dharmapuri and Namakkal.</p>
+      <p>From traditional breakfast spreads to grand wedding feasts, our expert team ensures every meal is prepared fresh and served with warmth and professionalism.</p>
+      <div class="about-features">
+        <div class="feature-item">🌿 Fresh Ingredients</div>
+        <div class="feature-item">👨‍🍳 Expert Chefs</div>
+        <div class="feature-item">🚐 All Tamil Nadu</div>
+        <div class="feature-item">🥗 Veg & Non-Veg</div>
+        <div class="feature-item">⏰ On Time Service</div>
+        <div class="feature-item">💯 Hygienic Cooking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE BANNER -->
+<section class="experience-banner">
+  <div class="exp-grid">
+    <div class="exp-item">
+      <span class="exp-num">5+</span>
+      <span class="exp-label">Years of Experience</span>
+    </div>
+    <div class="exp-divider"></div>
+    <div class="exp-item">
+      <span class="exp-num">500+</span>
+      <span class="exp-label">Events Completed</span>
+    </div>
+    <div class="exp-divider"></div>
+    <div class="exp-item">
+      <span class="exp-num">6</span>
+      <span class="exp-label">Cities Covered</span>
+    </div>
+    <div class="exp-divider"></div>
+    <div class="exp-item">
+      <span class="exp-num">100%</span>
+      <span class="exp-label">Fresh & Hygienic</span>
+    </div>
+    <div class="exp-divider"></div>
+    <div class="exp-item">
+      <span class="exp-num">1000+</span>
+      <span class="exp-label">Happy Families</span>
+    </div>
+  </div>
+  <div class="tamilnadu-para">
+    <h3>🌟 Available All Over Tamil Nadu</h3>
+    <p>
+      With over <span>5+ years of catering experience</span>, Sri Angalamman Catering proudly serves
+      families and organisations <span>across Tamil Nadu</span>. From the bustling city of
+      <span>Chennai</span> to the textile hub of <span>Tirupur</span>, from the cultural capital
+      <span>Coimbatore</span> to the historic <span>Salem, Dharmapuri</span> and <span>Namakkal</span>
+      — wherever your function is, we bring <span>authentic South Indian flavours</span> right to your
+      doorstep. Our experienced team ensures every meal is cooked fresh, served on time,
+      and leaves your guests asking for more. 🍛
+    </p>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="section-header">
+    <div class="section-tag">Our Menu</div>
+    <h2 class="section-title">Delicious Food for <span>Every Occasion</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-card-header">
+        <span class="menu-time-icon">🌅</span>
+        <h3>Breakfast</h3>
+        <p>Freshly prepared morning delights</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item"><div class="menu-dot"></div>Soft Idly with Sambar</div>
+        <div class="menu-item"><div class="menu-dot"></div>Crispy Vada</div>
+        <div class="menu-item"><div class="menu-dot"></div>Dosa & Varieties</div>
+        <div class="menu-item"><div class="menu-dot"></div>Hot Sambar</div>
+        <div class="menu-item"><div class="menu-dot"></div>Coconut Chutney</div>
+        <div class="menu-item"><div class="menu-dot"></div>Filter Coffee / Tea</div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-header">
+        <span class="menu-time-icon">☀️</span>
+        <h3>Afternoon Meals</h3>
+        <p>Full Veg & Non-Veg Lunch Spread</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item"><div class="menu-dot"></div>Steamed White Rice</div>
+        <div class="menu-item"><div class="menu-dot"></div>Sambar & Rasam</div>
+        <div class="menu-item"><div class="menu-dot"></div>Variety of Curries</div>
+        <div class="menu-item"><div class="menu-dot"></div>Banana Leaf Meals</div>
+        <div class="menu-item"><div class="menu-dot"></div>Chicken / Mutton Curry</div>
+        <div class="menu-item"><div class="menu-dot"></div>Payasam & Desserts</div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-header">
+        <span class="menu-time-icon">🌙</span>
+        <h3>Dinner</h3>
+        <p>Custom dinner as per requirement</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item"><div class="menu-dot"></div>Chapati & Parotta</div>
+        <div class="menu-item"><div class="menu-dot"></div>Fried Rice & Biryani</div>
+        <div class="menu-item"><div class="menu-dot"></div>Kurma & Gravies</div>
+        <div class="menu-item"><div class="menu-dot"></div>Veg & Non-Veg Options</div>
+        <div class="menu-item"><div class="menu-dot"></div>Customized Menu</div>
+        <div class="menu-item"><div class="menu-dot"></div>Based on Customer Choice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">We Cater for <span>All Occasions</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-emoji">💒</span>
+      <h3>Wedding Functions</h3>
+      <ul class="service-list">
+        <li>Engagement Ceremony</li>
+        <li>Wedding Reception</li>
+        <li>Mehendi Function</li>
+        <li>Wedding Lunch & Dinner</li>
+        <li>Post Wedding Functions</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🛕</span>
+      <h3>Temple & Religious</h3>
+      <ul class="service-list">
+        <li>Temple Festivals</li>
+        <li>Puja & Homam</li>
+        <li>Ayyappa Puja</li>
+        <li>Varalakshmi Puja</li>
+        <li>Karthigai & Pongal</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">👶</span>
+      <h3>Family Functions</h3>
+      <ul class="service-list">
+        <li>Baby Shower (Seemantham)</li>
+        <li>Cradle Ceremony</li>
+        <li>Ear Piercing Ceremony</li>
+        <li>Puberty Function</li>
+        <li>Naming Ceremony</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🎂</span>
+      <h3>Celebrations</h3>
+      <ul class="service-list">
+        <li>Birthday Parties</li>
+        <li>Anniversary Celebrations</li>
+        <li>Retirement Party</li>
+        <li>House Warming</li>
+        <li>Get Together</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🏢</span>
+      <h3>Corporate Events</h3>
+      <ul class="service-list">
+        <li>Office Lunch & Dinner</li>
+        <li>Corporate Meetings</li>
+        <li>Company Annual Day</li>
+        <li>Product Launch Events</li>
+        <li>Team Outing Functions</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🎓</span>
+      <h3>School & College</h3>
+      <ul class="service-list">
+        <li>Annual Day Functions</li>
+        <li>Farewell Party</li>
+        <li>Cultural Events</li>
+        <li>Sports Day</li>
+        <li>Graduation Ceremony</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="branches" id="branches">
+  <div class="section-header">
+    <div class="section-tag">Our Locations</div>
+    <h2 class="section-title">We Serve Across <span>Tamil Nadu</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="branches-grid">
+    <div class="branch-card main-branch">
+      <span class="branch-icon">🏠</span>
+      <h3>Erode</h3>
+      <p>Vallipurathaan Palayam,<br>Thindal, Erode – 638112</p>
+      <div class="main-tag">Main Branch</div>
+    </div>
+    <div class="branch-card">
+      <span class="branch-icon">📍</span>
+      <h3>Tirupur</h3>
+      <p>Serving all areas<br>in Tirupur district</p>
+    </div>
+    <div class="branch-card">
+      <span class="branch-icon">📍</span>
+      <h3>Coimbatore</h3>
+      <p>Serving all areas<br>in Coimbatore district</p>
+    </div>
+    <div class="branch-card">
+      <span class="branch-icon">📍</span>
+      <h3>Salem</h3>
+      <p>Serving all areas<br>in Salem district</p>
+    </div>
+    <div class="branch-card">
+      <span class="branch-icon">📍</span>
+      <h3>Dharmapuri</h3>
+      <p>Serving all areas<br>in Dharmapuri district</p>
+    </div>
+    <div class="branch-card">
+      <span class="branch-icon">📍</span>
+      <h3>Namakkal</h3>
+      <p>Serving all areas<br>in Namakkal district</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-header">
+    <div class="section-tag">Contact Us</div>
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>We're Here to <span>Serve You!</span></h3>
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div class="contact-item-text">
+          <h4>Call Us</h4>
+          <a href="tel:+919361168723">+91 9361168723</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">💬</div>
+        <div class="contact-item-text">
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/919361168723">+91 9361168723</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <h4>Main Branch</h4>
+          <p>Vallipurathaan Palayam, Thindal,<br>Erode – 638112, Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">⏰</div>
+        <div class="contact-item-text">
+          <h4>Available</h4>
+          <p>7 Days a Week<br>6:00 AM – 10:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <h3>Ready to Book?</h3>
+      <p>Call us now to discuss your event requirements. We'll plan the perfect menu just for you!</p>
+      <a href="tel:+919361168723" class="cta-phone">📞 +91 9361168723</a>
+      <a href="https://wa.me/919361168723?text=Hi, I want to enquire about catering for my event" class="cta-whatsapp">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Sri <span>Angalamman</span> Catering</div>
+  <p class="footer-tagline">Authentic South Indian Catering | Tamil Nadu</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#services">Services</a>
+    <a href="#branches">Branches</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/sri_ak_catering_" target="_blank">Instagram</a>
+  </div>
+  <hr class="footer-divider">
+  <p class="footer-bottom">© 2025 Sri Angalamman Catering. All Rights Reserved. | Erode, Tamil Nadu | +91 9361168723</p>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://www.instagram.com/sri_ak_catering_" target="_blank" class="instagram-float" title="Follow on Instagram">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </svg>
+</a>
+<a href="https://wa.me/919361168723?text=Hi, I want to enquire about catering for my event" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<a href="tel:+919361168723" class="call-float" title="Call Now">📞</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Close menu on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.menu-card, .service-card, .branch-card, .contact-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
